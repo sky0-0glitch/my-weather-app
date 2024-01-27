@@ -1,0 +1,10 @@
+body {
+  background-color: #e8c7a6;
+}
+.myApp {
+  border-radius: 40px;
+  padding: 260px 50px;
+  margin: 100px auto;
+  max-width: 471px;
+  background-image: url(https://images.pexels.com/photos/3395817/pexels-photo-3395817.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
