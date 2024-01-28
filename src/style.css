@@ -28,16 +28,6 @@ body {
   margin-left: 5px;
   font-size: 16px;
 }
-a {
-  color: #19536c;
-}
-footer {
-  border-top: 1px solid #578ea6;
-  padding: 30px 0 0 0;
-  text-align: center;
-  font-size: 18px;
-  color: #d7d7d7;
-}
 main {
   display: flex;
   justify-content: space-between;
@@ -56,4 +46,14 @@ h1 {
 p {
   color: #d7d7d7;
   font-size: 25px;
+}
+a {
+  color: #19536c;
+}
+footer {
+  border-top: 1px solid #578ea6;
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 18px;
+  color: #d7d7d7;
 }

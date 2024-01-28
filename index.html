@@ -21,19 +21,20 @@
   <body>
     <div class="myApp">
       <header>
-        <form class="form">
+        <form class="form" id="form">
           <input
             type="search"
             placeholder="Enter a city..."
             required
             class="search-form"
+            id="city"
           />
           <input type="submit" value="search" class="submit-form" />
         </form>
       </header>
       <main>
         <div>
-          <h1>paris</h1>
+          <h1 id="head">paris</h1>
           <p>
             Tuesday 14:49, scattered clouds<br />
             Humadity: 66%, Wind: 3.13km/h
@@ -54,5 +55,6 @@
         >
       </footer>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
