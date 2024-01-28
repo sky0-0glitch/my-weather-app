@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
@@ -9,9 +15,14 @@
   <body>
     <div class="myApp">
       <header>
-        <form>
-          <input type="search" placeholder="Enter a city..." required />
-          <input type="submit" value="search" />
+        <form class="form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-form"
+          />
+          <input type="submit" value="search" class="submit-form" />
         </form>
       </header>
       <main>
@@ -22,7 +33,7 @@
             Humadity: 66%, Wind: 3.13km/h
           </p>
         </div>
-        <div>⛅ 12℃</div>
+        <div class="degree">⛅ 12℃</div>
       </main>
       <footer>
         coded by <a href="https://github.com/sky0-0glitch">Sahar Omer,</a>code
