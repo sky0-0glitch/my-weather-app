@@ -1,4 +1,3 @@
-cityweather("Kabul");
 let formjs = document.querySelector("#form");
 formjs.addEventListener("submit", replacingFunction);
 function replacingFunction(event) {
@@ -13,7 +12,6 @@ function cityweather(city) {
   axios.get(apiurl).then(refresh);
 }
 function refresh(response) {
-  console.log(response.data);
   let currenttime = document.querySelector("#time");
   let currentdescription = document.querySelector("#description");
   let currenthumadity = document.querySelector("#humadity");
@@ -49,3 +47,4 @@ function formatedate(date) {
   }
   return `${day}${hours}:${minutes}`;
 }
+cityweather("Kabul");
