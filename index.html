@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,13 +35,13 @@
       </header>
       <main>
         <div>
-          <h1 id="head">paris</h1>
+          <h1 id="head"></h1>
           <p>
             Tuesday 14:49, scattered clouds<br />
             Humadity: 66%, Wind: 3.13km/h
           </p>
         </div>
-        <div class="degree">⛅ 12℃</div>
+        <div class="degree">⛅ <span id="current"></span>℃</div>
       </main>
       <footer>
         coded by
