@@ -34,16 +34,21 @@
         </form>
       </header>
       <main>
-        <div>
-          <h1 id="head"></h1>
-          <p>
-            <span id="time"></span> ,<span id="description"></span><br />
-            Humadity:<span id="humadity"></span>, Wind:<span id="wind"></span>
-          </p>
+        <div class="app-weather">
+          <div>
+            <h1 id="head"></h1>
+
+            <p>
+              <span id="time"></span> ,<span id="description"></span><br />
+              Humadity:<span id="humadity"></span>, Wind:<span id="wind"></span>
+            </p>
+          </div>
+
+          <div class="degree">
+            <span id="icon"></span> <span id="current"></span>℃
+          </div>
         </div>
-        <div class="degree">
-          <span id="icon"></span> <span id="current"></span>℃
-        </div>
+        <div class="weather-forcast" id="forcast"></div>
       </main>
       <footer>
         coded by

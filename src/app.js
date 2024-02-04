@@ -48,3 +48,18 @@ function formatedate(date) {
   return `${day}${hours}:${minutes}`;
 }
 cityweather("Kabul");
+let forecast = document.querySelector("#forcast");
+forecast.innerHTML = `<div id="forcastDay" class="forcastDay">tue</div>
+            <div id="forcastIcon" class="forcastIcon">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+                alt=""
+              />
+            </div>
+
+            <div id="forcastDegree" class="forcastDegree">
+              <span id="forcastMax">13° </span
+              ><span id="forcastMin" class="forcastMin"> 9°</span>
+            </div>
+          </div>
+         `;

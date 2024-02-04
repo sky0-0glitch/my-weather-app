@@ -29,19 +29,26 @@ body {
   font-size: 16px;
 }
 main {
+  padding: 30px 0;
+}
+.app-weather {
   display: flex;
   justify-content: space-between;
 }
 .degree {
+  display: flex;
   margin: 50px 30px;
   font-size: 50px;
   color: #d7d7d7;
   font-weight: 900;
   font-family: "Lobster", sans-serif;
 }
+
 h1 {
+  margin: 0;
   font-size: 80px;
   color: #d7d7d7;
+  line-height: 48px;
 }
 p {
   color: #d7d7d7;
@@ -57,7 +64,24 @@ footer {
   font-size: 18px;
   color: #d7d7d7;
 }
-.weather-app-icon {
-  width: 180px;
-  height: 150px;
+
+.forcastDay {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 23px;
+  color: #d7d7d7;
+
+  font-family: "Lobster", sans-serif;
+}
+.forcastIcon {
+  text-align: center;
+}
+.forcastDegree {
+  text-align: center;
+  color: #d5dddd;
+  font-size: 18px;
+  font-family: "Lobster", sans-serif;
+}
+.forcastMin {
+  opacity: 0.6;
 }
