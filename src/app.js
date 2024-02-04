@@ -28,6 +28,7 @@ function refresh(response) {
   currenthumadity.innerHTML = `${response.data.temperature.humidity}%`;
   currentwind.innerHTML = `${response.data.wind.speed}km/h`;
   currenticon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
+  getdata(response.data.city);
 }
 function formatedate(date) {
   let days = [
@@ -47,19 +48,43 @@ function formatedate(date) {
   }
   return `${day}${hours}:${minutes}`;
 }
-cityweather("Kabul");
-let forecast = document.querySelector("#forcast");
-forecast.innerHTML = `<div id="forcastDay" class="forcastDay">tue</div>
-            <div id="forcastIcon" class="forcastIcon">
-              <img
-                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
-                alt=""
-              />
-            </div>
+function getdata(city) {
+  apikey = `2710a7433443ato3f2a46b02f714f1fe`;
+  apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apikey}&units=metric`;
+  axios(apiUrl).then(displayforecast);
+}
+function displayforecast(response) {
+  console.log(response);
 
-            <div id="forcastDegree" class="forcastDegree">
-              <span id="forcastMax">13° </span
-              ><span id="forcastMin" class="forcastMin"> 9°</span>
+  let forecastHTML = "";
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="forecast-Days"> <div class="forcastDay">${formatDay(
+          day.time
+        )}
+        </div>
+            <img src="${day.condition.icon_url}" class="forcastIcon">
+            
+            <div class="forcastDegree">
+              <span id="forcastMax">${Math.round(
+                day.temperature.maximum
+              )} </span
+              ><span id="forcastMin" class="forcastMin"> ${Math.round(
+                day.temperature.minimum
+              )}</span>
             </div>
           </div>
-         `;
+        </div> `;
+    }
+  });
+  let forecast = document.querySelector("#forcast");
+  forecast.innerHTML = forecastHTML;
+}
+function formatDay(milisec) {
+  let date = new Date(milisec * 1000);
+  let days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+  return days[date.getDay()];
+}
+cityweather("Kabul");

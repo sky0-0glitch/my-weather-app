@@ -66,22 +66,34 @@ footer {
 }
 
 .forcastDay {
-  margin: 0 auto;
+  margin-bottom: 10px;
   text-align: center;
   font-size: 23px;
   color: #d7d7d7;
-
   font-family: "Lobster", sans-serif;
 }
 .forcastIcon {
-  text-align: center;
+  width: 74px;
+  display: block;
 }
 .forcastDegree {
   text-align: center;
   color: #d5dddd;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
   font-size: 18px;
   font-family: "Lobster", sans-serif;
 }
 .forcastMin {
   opacity: 0.6;
+  padding: 0 10px;
+}
+.forcastMax {
+  padding: 0 10px;
+}
+.weather-forcast {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
 }
